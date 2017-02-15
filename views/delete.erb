@@ -1,0 +1,6 @@
+<h1>Delete a pokemon</h1>
+
+<% @pokemon.each do |pok| %>
+<h4> <%= pok.name %> </h4>
+<h4><a href="/delete/success/<%=@pokemon.index pok%>">Delete <%= pok.name %></a></h4>
+<% end %>

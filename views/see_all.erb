@@ -1,0 +1,4 @@
+<% @pokemon.each do |pok| %>
+<h4> <%= pok.name %> </h4>
+<h4><a href="/see_all/<%=@pokemon.index pok%>">Take a closer look.</a></h4>
+<% end %>

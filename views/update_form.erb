@@ -1,0 +1,15 @@
+<h1> <%= @pokemon.name %> </h1>
+<h4> <%= @pokemon.poke_type %> </h4>
+<h4> <%= @pokemon.cp %> </h4>
+<h4> <%= @pokemon.img_url %> </h4>
+
+<h1> Update this pokemons info </h1>
+
+<form action='/update/success' method='post'>
+  <input type='hidden' name='input' value='<%= @pokemon.id %>'>
+  <input type='text' name='name' placeholder="name" value='<%= @pokemon.name %>'>
+  <input type='text' name='poke_type' placeholder="type" value='<%= @pokemon.poke_type %>'>
+  <input type='text' name='cp' placeholder="cp" value='<%= @pokemon.cp.to_s %>'>
+  <input type='text' name='img_url' placeholder="img_url" value='<%= @pokemon.img_url %>'>
+  <input type='submit' name='Submit'>
+</form>
